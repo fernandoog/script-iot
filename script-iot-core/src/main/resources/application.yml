@@ -14,7 +14,7 @@ spring:
 app:
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: 127.0.0.1:9092
     consumer:
       group-id: iot
       auto-offset-reset: earliest
@@ -27,7 +27,7 @@ app:
       script-: TrackScript
 
   influxdb:
-    url: http://localhost:8086
+    url: http://127.0.0.1:8086
     user: admin
     pass: admin
     database: data

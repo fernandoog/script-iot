@@ -25,7 +25,7 @@ services:
       - "zookeeper"
 
   influxdb:
-    image: influxdb:latest
+    image: influxdb:1.2
     container_name: influxdb
     ports:
       - "8083:8083" # Admin interface
@@ -40,19 +40,6 @@ services:
       - INFLUXDB_ADMIN_ENABLED=true
     volumes:
       - influxdb-storage:/var/lib/influxdb
-
-# InfluxDB admin UI
-#  chronograf:
-#    image: chronograf:latest
-#    container_name: chronograf
-#    ports:
-#      - "8888:8888"
-#    environment:
-#      - INFLUXDB_URL=http://influxdb:8086
-#    links:
-#      - influxdb:influxdb
-#    volumes:
-#      - chronograf-storage:/var/lib/chronograf
 
 volumes:
   influxdb-storage:
