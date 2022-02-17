@@ -1,0 +1,3 @@
+[submodule "doc/examples/iot"]
+	path = doc/examples/iot
+	url = https://github.com/platformio/platform-espressif8266.git
