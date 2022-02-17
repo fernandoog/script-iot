@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/script-iot.iml" filepath="$PROJECT_DIR$/.idea/script-iot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/script-iot-core/script-iot-core.iml" filepath="$PROJECT_DIR$/script-iot-core/script-iot-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/script-iot-ui/script-iot-ui.iml" filepath="$PROJECT_DIR$/script-iot-ui/script-iot-ui.iml" />
+    </modules>
+  </component>
+</project>
