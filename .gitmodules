@@ -1,3 +1,6 @@
 [submodule "doc/examples/iot"]
 	path = doc/examples/iot
 	url = https://github.com/platformio/platform-espressif8266.git
+[submodule "doc/examples/spring-boot"]
+	path = doc/examples/spring-boot
+	url = https://github.com/thegeekyasian/docker-compose-Spring-Boot-MySQL.git
