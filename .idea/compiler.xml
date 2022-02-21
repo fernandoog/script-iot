@@ -7,13 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="script-iot-ui" />
         <module name="script-iot-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="script-iot" target="11" />
-      <module name="script-iot-core" target="11" />
+      <module name="script-iot-core" target="1.8" />
       <module name="script-iot-ui" target="11" />
       <module name="script-server" target="11" />
     </bytecodeTargetLevel>

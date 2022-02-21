@@ -1,0 +1,22 @@
+<div class="row">
+  <h2> Script List</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    <th> Code</th>
+    <th> Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let script of scripts">
+    <td> {{ script.code }} </td>
+    <td>
+      <button (click)="updateScript(script.id)" class="btn btn-primary"> Update</button>
+      <button (click)="deleteScript(script.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click)="scriptDetails(script.id)" class="btn btn-primary" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
