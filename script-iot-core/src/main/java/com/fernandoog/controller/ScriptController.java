@@ -51,8 +51,6 @@ public class ScriptController {
     return scriptRepository.findAll();
   }
 
-  // update script rest api
-
   // get script by id rest api
   @GetMapping("/scripts/{id}")
   public ResponseEntity<Script> getScriptById(@PathVariable Long id) {
@@ -61,6 +59,7 @@ public class ScriptController {
     return ResponseEntity.ok(script);
   }
 
+  // update script rest api
   @PutMapping("/scripts/{id}")
   public ResponseEntity<Script> updateScript(@PathVariable Long id, @RequestBody Script scriptDetails) {
     Script script = scriptRepository.findById(id)
@@ -70,6 +69,14 @@ public class ScriptController {
 
     Script updatedScript = scriptRepository.save(script);
     return ResponseEntity.ok(updatedScript);
+  }
+
+  // Execute script by id rest api
+  @GetMapping("/scripts/exec/{id}")
+  public ResponseEntity<Script> launchScriptById(@PathVariable Long id) {
+    Script script = scriptRepository.findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
+    return ResponseEntity.ok(script);
   }
 
 
