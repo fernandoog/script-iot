@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/script-iot-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/script-iot-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script-iot-shell/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/script-iot-shell/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/script-iot-ui/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/script-iot-ui/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

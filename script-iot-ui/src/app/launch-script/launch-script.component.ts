@@ -4,14 +4,15 @@ import {ActivatedRoute} from '@angular/router';
 import {ScriptService} from '../script.service';
 
 @Component({
-  selector: 'app-script-details',
-  templateUrl: './script-details.component.html',
-  styleUrls: ['./script-details.component.css']
+  selector: 'app-launch-script',
+  templateUrl: './launch-script.component.html',
+  styleUrls: ['./launch-script.component.css']
 })
-export class ScriptDetailsComponent implements OnInit {
+export class LaunchScriptComponent implements OnInit {
 
   id: number
   script: Script
+  result: string
 
   constructor(private route: ActivatedRoute, private scriptService: ScriptService) {
   }

@@ -1,0 +1,19 @@
+spring:
+  main:
+    banner-mode: off
+  shell:
+    command:
+      completion:
+        root-command: spring-shell-samples
+## disable console logging
+logging:
+  pattern:
+    console:
+## log debug from a cli
+#  file:
+#    name: shell.log
+#  level:
+#    root: debug
+#    org:
+#      springframework:
+#        shell: debug
