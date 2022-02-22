@@ -23,6 +23,5 @@
 
     <modules>
         <module>script-iot-core</module>
-        <module>script-iot-shell</module>
     </modules>
 </project>
