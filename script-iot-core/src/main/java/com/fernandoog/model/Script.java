@@ -13,6 +13,7 @@ public class Script {
 
   @Column(name = "code")
   private String code;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;

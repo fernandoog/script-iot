@@ -8,6 +8,7 @@ import {CreateScriptComponent} from './create-script/create-script.component';
 import {FormsModule} from '@angular/forms';
 import {UpdateScriptComponent} from './update-script/update-script.component';
 import {ScriptDetailsComponent} from './script-details/script-details.component'
+import {LaunchScriptComponent} from './launch-script/launch-script.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ScriptDetailsComponent} from './script-details/script-details.component'
     ScriptListComponent,
     CreateScriptComponent,
     UpdateScriptComponent,
-    ScriptDetailsComponent
+    ScriptDetailsComponent,
+    LaunchScriptComponent
   ],
   imports: [
     BrowserModule,

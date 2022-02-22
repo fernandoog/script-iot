@@ -19,6 +19,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" />
+          <factory-entry name="script-iot-core" value="39b5dfa6-4304-47fa-a2f9-8d388b3c8242" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

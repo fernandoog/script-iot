@@ -24,6 +24,10 @@ export class ScriptListComponent implements OnInit {
     this.router.navigate(['script-details', id]);
   }
 
+  launchScript(id: number) {
+    this.router.navigate(['launch-script', id]);
+  }
+
   updateScript(id: number) {
     this.router.navigate(['update-script', id]);
   }
