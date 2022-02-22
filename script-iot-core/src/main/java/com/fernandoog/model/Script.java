@@ -14,6 +14,9 @@ public class Script {
   @Column(name = "code")
   private String code;
 
+  @Column(name = "result")
+  private String result;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
@@ -25,6 +28,7 @@ public class Script {
     super();
     this.id = id;
     this.code = code;
+    this.result = result;
   }
 
   public String getCode() {
@@ -41,5 +45,13 @@ public class Script {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  public String getResult() {
+    return result;
+  }
+
+  public void setResult(String result) {
+    this.result = result;
   }
 }

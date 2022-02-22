@@ -76,6 +76,7 @@ public class ScriptController {
   public ResponseEntity<Script> launchScriptById(@PathVariable Long id) {
     Script script = scriptRepository.findById(id)
         .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
+
     return ResponseEntity.ok(script);
   }
 
