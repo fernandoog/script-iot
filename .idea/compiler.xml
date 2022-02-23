@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="script-iot" target="11" />
-      <module name="script-iot-core" target="11" />
+      <module name="script-iot-core" target="1.8" />
       <module name="script-iot-shell" target="1.8" />
       <module name="script-iot-ui" target="11" />
       <module name="script-server" target="11" />

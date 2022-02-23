@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -76,11 +79,23 @@ public class ScriptController {
         Script script = scriptRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
 
+        String result = "";
         try {
-            script.setResult(String.valueOf(Runtime.getRuntime().exec(script.getCode())));
+            Process child = Runtime.getRuntime().exec(script.getCode());
+            DataInputStream in = new DataInputStream(
+                    child.getInputStream());
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(in));
+            String line;
+            while ((line = br.readLine()) != null) {
+                result += line;
+            }
+            in.close();
         } catch (IOException e) {
             log.error(e.getMessage());
         }
+
+        script.setResult(result);
 
         return ResponseEntity.ok(script);
     }
