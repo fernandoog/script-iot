@@ -22,7 +22,7 @@ import java.util.Map;
 @RequestMapping("/api/v1/")
 public class ScriptController {
 
-    public static final String EXITED_WITH_ERROR_CODE = "Exited with error code : ";
+    public static final String SCRIPT_NOT_EXIST_WITH_ID = "Script not exist with id :";
     Logger log = LoggerFactory.getLogger(ScriptController.class);
 
     @Autowired
@@ -31,6 +31,7 @@ public class ScriptController {
     // create script rest api
     @PostMapping("/scripts")
     public Script createScript(@RequestBody Script script) {
+        // TODO scriptDTO
         return scriptRepository.save(script);
     }
 
@@ -38,7 +39,7 @@ public class ScriptController {
     @DeleteMapping("/scripts/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteScript(@PathVariable Long id) {
         Script script = scriptRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException(SCRIPT_NOT_EXIST_WITH_ID + id));
 
         scriptRepository.delete(script);
         Map<String, Boolean> response = new HashMap<>();
@@ -56,15 +57,16 @@ public class ScriptController {
     @GetMapping("/scripts/{id}")
     public ResponseEntity<Script> getScriptById(@PathVariable Long id) {
         Script script = scriptRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException(SCRIPT_NOT_EXIST_WITH_ID + id));
         return ResponseEntity.ok(script);
     }
 
     // update script rest api
     @PutMapping("/scripts/{id}")
     public ResponseEntity<Script> updateScript(@PathVariable Long id, @RequestBody Script scriptDetails) {
+        // TODO scriptDetailsDTO
         Script script = scriptRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException(SCRIPT_NOT_EXIST_WITH_ID + id));
 
         script.setCode(scriptDetails.getCode());
 
@@ -77,9 +79,9 @@ public class ScriptController {
     public ResponseEntity<Script> launchScriptById(@PathVariable Long id) {
 
         Script script = scriptRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Script not exist with id :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException(SCRIPT_NOT_EXIST_WITH_ID + id));
 
-        String result = "";
+        StringBuilder result = new StringBuilder();
         try {
             Process child = Runtime.getRuntime().exec(script.getCode());
             DataInputStream in = new DataInputStream(
@@ -88,14 +90,15 @@ public class ScriptController {
                     new InputStreamReader(in));
             String line;
             while ((line = br.readLine()) != null) {
-                result += line;
+                result.append(line);
             }
             in.close();
         } catch (IOException e) {
             log.error(e.getMessage());
+            script.setResult(e.getMessage());
         }
 
-        script.setResult(result);
+        script.setResult(result.toString());
 
         return ResponseEntity.ok(script);
     }
