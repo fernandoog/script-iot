@@ -10,7 +10,7 @@ describe('CreateScriptComponent', () => {
     TestBed.configureTestingModule({
       declarations: [CreateScriptComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
