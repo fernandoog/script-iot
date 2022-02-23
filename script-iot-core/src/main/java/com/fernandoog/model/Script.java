@@ -19,12 +19,6 @@ public class Script {
     public Script() {
     }
 
-    public Script(long id, String code) {
-        super();
-        this.id = id;
-        this.code = code;
-    }
-
     public String getCode() {
         return code;
     }
