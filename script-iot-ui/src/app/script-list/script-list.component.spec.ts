@@ -10,7 +10,7 @@ describe('ScriptListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ScriptListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

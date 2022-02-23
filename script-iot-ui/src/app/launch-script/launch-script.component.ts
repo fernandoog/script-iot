@@ -21,7 +21,7 @@ export class LaunchScriptComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
 
     this.script = new Script();
-    this.scriptService.getScriptById(this.id).subscribe(data => {
+    this.scriptService.launchScriptById(this.id).subscribe(data => {
       this.script = data;
     });
   }
