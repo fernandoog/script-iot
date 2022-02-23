@@ -34,6 +34,6 @@ export class ScriptService {
   }
 
   launchScriptById(id: number): Observable<Script> {
-    return this.httpClient.get<Script>(`${this.baseURL}/${id}`);
+    return this.httpClient.get<Script>(`${this.baseURL}/exec/${id}`);
   }
 }
