@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/script-iot.iml" filepath="$PROJECT_DIR$/.idea/script-iot.iml" />
       <module fileurl="file://$PROJECT_DIR$/script-iot-core/script-iot-core.iml" filepath="$PROJECT_DIR$/script-iot-core/script-iot-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/script-iot-ui/script-iot-ui.iml" filepath="$PROJECT_DIR$/script-iot-ui/script-iot-ui.iml" />
     </modules>
   </component>
 </project>

@@ -24,3 +24,7 @@ hs_err_pid*
 /script-iot-ui/target/
 /script-iot-core/target/
 /.idea/
+/.idea/
+/.jpb/
+/script-iot-ui/.vscode/
+/doc/20220101-Prueba_técnica_java_senior.pdf

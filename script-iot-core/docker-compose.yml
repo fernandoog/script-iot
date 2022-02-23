@@ -10,7 +10,7 @@ services:
 
   kafka:
     image: wurstmeister/kafka
-    command: [start-kafka.sh]
+    command: [ start-kafka.sh ]
     ports:
       - "9092:9092"
     hostname: kafka

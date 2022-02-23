@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/doc/examples/iot" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/doc/examples/spring-boot" vcs="Git" />
   </component>
 </project>

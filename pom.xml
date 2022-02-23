@@ -9,9 +9,8 @@
     <artifactId>script-iot</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-
-    <name>script-server</name>
-    <description>script-server</description>
+    <name>script-iot</name>
+    <description>script-iot</description>
 
 
     <properties>
@@ -24,6 +23,5 @@
 
     <modules>
         <module>script-iot-core</module>
-        <module>script-iot-ui</module>
     </modules>
 </project>
