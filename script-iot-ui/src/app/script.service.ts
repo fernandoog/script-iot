@@ -32,4 +32,8 @@ export class ScriptService {
   deleteScript(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
+
+  launchScriptById(id: number): Observable<Script> {
+    return this.httpClient.get<Script>(`${this.baseURL}/exec/${id}`);
+  }
 }
