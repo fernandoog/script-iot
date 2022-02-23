@@ -23,7 +23,6 @@ public class Script {
         super();
         this.id = id;
         this.code = code;
-        this.result = result;
     }
 
     public String getCode() {
